@@ -13,7 +13,7 @@ from knb import knb
 from calculator import calc
 
 
-version_prog = "1.00"
+version_prog = "1.02"
 print(f"Ver {version_prog}")
 
 
@@ -110,6 +110,8 @@ def question():
                     case '3':
                         print("Выход из программы.")
                         break
+                    case _:
+                        print("Неверный выбор. Пожалуйста, попробуйте снова.")
             case '2':
                 quast_answer_two = input(questions_base["answer_base"]["message_two"])
                 if quast_answer_two == '1':
@@ -126,6 +128,7 @@ def question():
                 break
             case _:
                 print("Неверный выбор. Пожалуйста, попробуйте снова.")
+                continue
 
 
 def welcome():
